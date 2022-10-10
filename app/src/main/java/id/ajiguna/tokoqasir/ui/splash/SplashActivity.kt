@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.ajiguna.tokoqasir.databinding.ActivitySplashBinding
 import id.ajiguna.tokoqasir.ui.main.MainActivity
+import org.koin.dsl.module
+
+val splashModule = module {
+    factory { SplashActivity() }
+}
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var splashBinding: ActivitySplashBinding
