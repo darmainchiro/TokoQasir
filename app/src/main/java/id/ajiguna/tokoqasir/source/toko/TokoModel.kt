@@ -1,5 +1,7 @@
 package id.ajiguna.tokoqasir.source.toko
 
+import java.io.Serializable
+
 data class TokoModel (
     val record: Record,
     val metadata: Metadata
@@ -24,12 +26,12 @@ data class Product(
     val stock: Int,
     val description: String,
     val images: Images,
-)
+): Serializable
 
 data class Images(
     val thumbnail: String,
     val large: String
-)
+): Serializable
 
 data class Metadata (
     val createdAt: String,

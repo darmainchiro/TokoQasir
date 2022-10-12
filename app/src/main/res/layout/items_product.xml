@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="start"
                 android:maxLines="1"
-                android:text="@{Integer.toString(product.price)}"
+                android:text="@{`Rp ` + Integer.toString(product.price)}"
                 tools:text="@string/price"
                 app:layout_constraintEnd_toStartOf="@id/tv_value_stock"
                 app:layout_constraintStart_toStartOf="@+id/tv_item_title"

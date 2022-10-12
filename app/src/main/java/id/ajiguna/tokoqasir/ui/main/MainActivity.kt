@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(product: Product) {
                 startActivity(
                     Intent(this@MainActivity, DetailActivity::class.java)
-                        .putExtra("detail", product.product_id)
+                        .putExtra("detail", product)
                 )
             }
         })
