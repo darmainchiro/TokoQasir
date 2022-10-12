@@ -19,11 +19,17 @@ class MainViewModel(val tokoRepository: TokoRepository): ViewModel() {
 
     init {
         message.value = null
+        fetch()
     }
 
     fun fetch() {
         viewModelScope.launch {
-
+            try {
+                val response = tokoRepository.fetch()
+                toko.value = response
+            } catch (e: Exception){
+                message.value = "Terjadi kesalahan"
+            }
         }
     }
 

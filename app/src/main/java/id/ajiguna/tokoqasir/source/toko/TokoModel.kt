@@ -18,8 +18,8 @@ data class Data(
 )
 
 data class Product(
-    val productId: Int,
-    val productName: String,
+    val product_id: Int,
+    val product_name: String,
     val price: Int,
     val stock: Int,
     val description: String,
